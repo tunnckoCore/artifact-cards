@@ -1,2 +1,2 @@
-# artifact-cards
-Artifact Cards collectible collection on Ethscriptions
+# astro-alchemist-cards-vercel
+Astro Alchemist mint site for the cards

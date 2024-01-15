@@ -1,0 +1,292 @@
+---
+import "../global.css";
+import * as config from "../config.mjs";
+
+const presaleItems = [
+  "al-tima.webp",
+  "pleb-watch.webp",
+  "bitcoin-maxi.webp",
+  "beemer.webp",
+];
+
+const items = [
+  {
+    filename: "cheif-steal-ya-crypto.webp",
+    name: "cheif-steal-ya-crypto",
+    sha: "d109e48cf0cadd7c84f7682568734a41ff717f0e66ffedd10f0e9731e6af7847",
+    supply: 50,
+  },
+  {
+    filename: "mansion.webp",
+    name: "mansion",
+    sha: "c215e7750b6ce658676abdfceb308a9db41737c80057c729b0ef0486db14ca9c",
+    supply: 60,
+  },
+  {
+    filename: "lambo.webp",
+    name: "lambo",
+    sha: "913164883a7e2e25441472ae8c915a549716dd950e4ce844aa063fb9a332cf73",
+    supply: 70,
+  },
+  {
+    filename: "ggs.webp",
+    name: "ggs",
+    sha: "986fac6bd79ece552a40ce890c71c8dba5f0aa381bc6cf743e07454a3a50667e",
+    supply: 80,
+  },
+  {
+    filename: "miami-condo.webp",
+    name: "miami-condo",
+    sha: "42a00ddd8ed48c42f6c0b4d9a69fed5fae2ca3f36bcbbd092c85f02584eeb971",
+    supply: 90,
+  },
+  {
+    filename: "viperz.webp",
+    name: "viperz",
+    sha: "bcaf3d4b994cca2a1b7643e0dd5daa4374834f2b049717875fd7357937ae9eeb",
+    supply: 100,
+  },
+  {
+    filename: "spaces-host.webp",
+    name: "spaces-host",
+    sha: "742d5eb71b20478f46924fc582d8ae620d2c4b0205c8d51d01dd02e140d0cbf3",
+    supply: 115,
+  },
+  {
+    filename: "ruggie.webp",
+    name: "ruggie",
+    sha: "3ca7626b5e5ab8bc574540f5713302c40b462d7219d624c6eaa3b90bb46bda86",
+    supply: 130,
+  },
+  {
+    filename: "sol-bro.webp",
+    name: "sol-bro",
+    sha: "a827df8adc3e7be6ecfe5964e3fd08a5fae17d3c7553b9ff8a9181143660f762",
+    supply: 145,
+  },
+  {
+    filename: "influencooor.webp",
+    name: "influencooor",
+    sha: "b62cd2953fad0a586a9be53087be57ce8df436df335ab973b8a84ef7e0a34710",
+    supply: 160,
+  },
+  {
+    filename: "bitcoin-maxi.webp",
+    name: "bitcoin-maxi",
+    sha: "a931275f173f7ae91fb1a87aac7e36f8f19a58c84c6e9cc3b34b242c2084ef48",
+    supply: 175,
+  },
+  {
+    filename: "eth-maxi.webp",
+    name: "eth-maxi",
+    sha: "21ba52db3babf3eb1a12b0518fbde81919d6e3cb45c37ab8d683e782dea122aa",
+    supply: 190,
+  },
+  {
+    filename: "ethscription-bro.webp",
+    name: "ethscription-bro",
+    sha: "ebeb7ee7b46493d07fc0857a0f313259ce86c681a0e59795b93cf760810e767f",
+    supply: 205,
+  },
+  {
+    filename: "gold-bros.webp",
+    name: "gold-bros",
+    sha: "849014a4907c9df7c42d75db6f29fb893c9d122133302643a0df109b14d608ce",
+    supply: 220,
+  },
+  {
+    filename: "rollie.webp",
+    name: "rollie",
+    sha: "8b3cd08334de15d0a01d47fc0580c9a2e00cfe95baf113f1792b16511263528e",
+    supply: 235,
+  },
+  {
+    filename: "reply-bro.webp",
+    name: "reply-bro",
+    sha: "9b8847cb08f5fb1c5a059e44167a2bb4e5f2831f2dd0ee0414c16c5755e84c46",
+    supply: 250,
+  },
+  {
+    filename: "studio-apartment.webp",
+    name: "studio-apartment",
+    sha: "0cffaeab91678f47e9cf1b075001654b6ca39f7c3e17c7d05cdb8e4d7112a049",
+    supply: 270,
+  },
+  {
+    filename: "battlestation-bros.webp",
+    name: "battlestation-bros",
+    sha: "72df4610e246c49bc7f96d6be6d985706ca2886796ff8fc3846d1fb1482d8912",
+    supply: 290,
+  },
+  {
+    filename: "cabal-bros.webp",
+    name: "cabal-bros",
+    sha: "2073c6fe1f7d2f949b3785ff98127aa072f1e02c845f5e0f7d4b46e41218f3e3",
+    supply: 310,
+  },
+  {
+    filename: "ev-bro.webp",
+    name: "ev-bro",
+    sha: "dfd3b4d2672de2f527f761a78c757052da0fd98310e667ab7a7ae929a84af34d",
+    supply: 330,
+  },
+  {
+    filename: "gatekeeper-bros.webp",
+    name: "gatekeeper-bros",
+    sha: "0b51814f79f2729864a245aaceea5241b0f42b251cddf3789f978f024d5b7e4f",
+    supply: 350,
+  },
+  {
+    filename: "web3-baddie.webp",
+    name: "web3-baddie",
+    sha: "6d45bf6b4492d33a984c80934cff0d218c632687be74882cfb40bd8bc837017d",
+    supply: 370,
+  },
+  {
+    filename: "pepe-maxi.webp",
+    name: "pepe-maxi",
+    sha: "d418acbb90eb4d5ce9f6188c95757244791b1605ef6b65ebc9c6ec37214abc75",
+    supply: 390,
+  },
+  {
+    filename: "beemer.webp",
+    name: "beemer",
+    sha: "73e64e6dc367bfc54d545e0db91e02f4d50b3ac2755e5013fa9cc1c2d4710db1",
+    supply: 430,
+  },
+  {
+    filename: "ai-artist-bro.webp",
+    name: "ai-artist-bro",
+    sha: "d51015f2d69680b15283508f148aa205473630e61cd3ba3753d5841dd30186be",
+    supply: 460,
+  },
+  {
+    filename: "brokie-battlestation.webp",
+    name: "brokie-battlestation",
+    sha: "5709d7f1c765cc2b648f60fe58ca08a0c35353140d63684bebcd9be3db089dc6",
+    supply: 485,
+  },
+  {
+    filename: "pleb-watch.webp",
+    name: "pleb-watch",
+    sha: "c55cc87677b2d4116f6e001b371c0e6c13a3e3053789a3f6ad2179cbee51dc3e",
+    supply: 505,
+  },
+  {
+    filename: "moms-basement.webp",
+    name: "moms-basement",
+    sha: "865010c32c9324dcf920c3dd0868db8c00e9a914f4a31667717dbff52eb63e35",
+    supply: 540,
+  },
+  {
+    filename: "al-tima.webp",
+    name: "al-tima",
+    sha: "a20e0a84d8b8162ada2140d9efd9172aa2d8bd51180a964fb635314b3a3a5631",
+    supply: 580,
+  },
+  {
+    filename: "shitcoin-dev.webp",
+    name: "shitcoin-dev",
+    sha: "804c13cba60eda0ffde775c3a60da50109c99be32ccfdd80c5f7788eb557b8de",
+    supply: 640,
+  },
+  {
+    filename: "satoshi-nakamoto.webp",
+    name: "satoshi-nakamoto",
+    sha: "b7faf3edd11f8c996f508b53f5f61e00c4a9f4210607489c4cb34930c439b5cb",
+    supply: 663,
+  },
+];
+
+const stats = await fetch("https://quick-sand-47.deno.dev/progress").then((x) =>
+  x.json(),
+);
+
+const rankedReversed = items
+  .map((x) => {
+    return { ...x, count: stats[x.name] || 0 };
+  })
+  .reverse();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{config.heading} - Collection</title>
+    <style is:global>
+      /* text color infinite animate */
+      .background-animate {
+        background-size: 200%;
+        -webkit-animation: AnimateBackgroud 2s ease infinite;
+        -moz-animation: AnimateBackgroud 2s ease infinite;
+        animation: AnimateBackgroud 2s ease infinite;
+      }
+
+      @keyframes AnimateBackgroud {
+        0% {
+          background-position: 0;
+        }
+
+        50% {
+          background-position: 100%;
+        }
+
+        100% {
+          background-position: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="x">
+    <div class="flex flex-col items-center justify-center bg-gray-100">
+      <h1 class="mb-5 mt-10 flex gap-2 text-center text-5xl font-extrabold">
+        <a
+          href="/"
+          class="background-animate border-b-2 border-dashed bg-gradient-to-br from-pink-400 to-blue-500 bg-clip-text text-transparent"
+          >Artifact Cards</a
+        ><div class="text-sm">
+          {stats.__total} of {stats.__maxSupply} minted
+        </div>
+      </h1>
+
+      <div
+        class="mx-auto my-3 mb-10 flex w-full flex-wrap items-center justify-center"
+      >
+        {
+          rankedReversed.map((x) => {
+            const cardName = x.name
+              .split("-")
+              .map((x) => x[0].toUpperCase() + x.slice(1))
+              .join(" ");
+
+            return (
+              <div class="m-2 flex flex-col rounded-2xl border border-gray-300 bg-white/70 p-4 shadow-xl transition hover:shadow-2xl">
+                <div>
+                  <img
+                    src={`/img/${x.filename}`}
+                    class="h-[500px] w-[400px] rounded-2xl"
+                  />
+                </div>
+                <div>
+                  <h2 class="p-2 text-center text-lg font-bold">{cardName}</h2>
+                  <ul class="flex justify-between gap-2 text-sm text-gray-700 sm:flex-col">
+                    <li>
+                      <strong>Minted:</strong> {x.count} of {x.supply} supply
+                    </li>
+                    <li>
+                      <strong>SHA:</strong>{" "}
+                      {x.sha.slice(0, 10) + "..." + x.sha.slice(-10)}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </body>
+</html>

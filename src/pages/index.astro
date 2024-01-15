@@ -1,0 +1,29 @@
+---
+import "../global.css";
+import Mint from "../islands/mint";
+import * as config from "../config.mjs";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{config.title}</title>
+  </head>
+  <body class="bg-slate-950 px-4 text-slate-100 sm:px-0">
+    <div class="mx-auto flex max-w-2xl flex-col items-center justify-center">
+      <section class="mt-8 flex flex-col items-center justify-center gap-4">
+        <h1 class="text-5xl font-extrabold">
+          <a href="/" rel="home">{config.heading}</a>
+        </h1>
+        <div class="text-center" set:html={config.description} />
+
+        <div class="mb-10 flex max-w-md flex-col gap-4">
+          <Mint client:load info={{}} />
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
